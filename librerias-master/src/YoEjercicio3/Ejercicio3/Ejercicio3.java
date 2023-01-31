@@ -40,7 +40,7 @@ private static final Scanner SCIN= new Scanner(System.in);
 //----------------------------------------------------------------------------------------------------//
 
         System.out.println("Dime una palabra para comprobar si la contiene algun nombre del fichero");
-        String palabra = sc.nextLine();
+        String palabra = SCIN.nextLine();
 
 
         boolean existe = existePalabra(nombres,palabra);
@@ -56,7 +56,7 @@ private static final Scanner SCIN= new Scanner(System.in);
         //------------------------------------------------------------------------------------//
 
         System.out.println("Dime otra palabra para buscar y devolverte la lista de los nombres");
-        String palabra2 = sc.nextLine();
+        String palabra2 = SCIN.nextLine();
 
 
         List<String>listaNombresP = obtenerListaQueContenganPalabra(nombres,palabra2);
@@ -115,10 +115,10 @@ private static final Scanner SCIN= new Scanner(System.in);
 
         List<String> contienenPalabra = new ArrayList<>();
 
-        for (String list:lista ) {
+        for (String nombre:lista ) {
 
-            if (lista.contains(palabra2.toLowerCase())){
-                contienenPalabra.add(lista.toString());
+            if (nombre.contains(palabra2.toLowerCase())){
+                contienenPalabra.add(nombre);
             }
         }
 
